@@ -1,0 +1,13 @@
+.ai-dev/logs/
+.ai-dev/*.log
+.env
+__pycache__/
+*.pyc
+*.egg-info/
+dist/
+build/
+.pytest_cache/
+*.class
+*.jar
+target/
+node_modules/
