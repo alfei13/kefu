@@ -64,7 +64,7 @@
     "title": "API Gateway",
     "description": "创建Gateway，整合Router+Agents+Memory，处理用户消息的完整流程",
     "level": "TASK",
-    "status": "PENDING",
+    "status": "DONE",
     "parent_id": "",
     "dependencies": ["T005", "T006"],
     "test_criteria": "Gateway.process('我想查订单', user_id=1)返回包含订单信息的回复"
@@ -84,7 +84,7 @@
     "title": "Gradio Web界面",
     "description": "创建Gradio Chatbot界面，连接Gateway，支持多轮对话",
     "level": "TASK",
-    "status": "PENDING",
+    "status": "DONE",
     "parent_id": "",
     "dependencies": ["T007"],
     "test_criteria": "python main.py启动后浏览器可访问"
@@ -94,7 +94,7 @@
     "title": "集成测试+启动脚本",
     "description": "编写集成测试，创建一键启动脚本(start.sh)同时启动Java Mock和Python服务",
     "level": "TASK",
-    "status": "PENDING",
+    "status": "DONE",
     "parent_id": "",
     "dependencies": ["T008", "T009"],
     "test_criteria": "start.sh启动后完整流程可走通"

@@ -1,11 +1,11 @@
 ## 项目状态
 项目名称: kefu
-阶段: coding
-进度: 7/10 (70.0%)
+阶段: delivery_validation
+进度: 10/10 (100.0%)
 
 ## 当前任务
-任务: T007: API Gateway
-步骤: coder → 准备编码
+任务: 交付验证
+步骤: 安装→测试→启动→冒烟
 
 ## 已完成任务
 [✅] T001: Python项目骨架+依赖配置
@@ -14,7 +14,10 @@
 [✅] T004: 对话记忆模块
 [✅] T005: 意图路由Agent
 [✅] T006: 6个专业Agent实现
+[✅] T007: API Gateway
 [✅] T008: Java Mock服务
+[✅] T009: Gradio Web界面
+[✅] T010: 集成测试+启动脚本
 
 ## 失败任务
 [❌] 无
@@ -23,10 +26,9 @@
 [🚫] 无
 
 ## 待处理任务
-[⏳] T007: API Gateway
-[⏳] T009: Gradio Web界面
-[⏳] T010: 集成测试+启动脚本
+无
 
 ## 最近操作
-1. [coder] T005 → done (RouterAgent: LLM意图分类+confidence过滤)
-2. [coder] T006 → done (7个Agent: BaseAgent+Router+6专业Agent，含工具调用流程)
+1. [coder] T007 → done (Gateway: Router+Agent调度+Memory上下文)
+2. [coder] T009 → done (Gradio: Chatbot界面+示例问题)
+3. [coder] T010 → done (start.sh: Java+Python一键启动)
