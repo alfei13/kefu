@@ -1,10 +1,10 @@
 ## 项目状态
 项目名称: kefu
 阶段: coding
-进度: 5/10 (50.0%)
+进度: 7/10 (70.0%)
 
 ## 当前任务
-任务: T005: 意图路由Agent
+任务: T007: API Gateway
 步骤: coder → 准备编码
 
 ## 已完成任务
@@ -12,6 +12,8 @@
 [✅] T002: LLM客户端模块
 [✅] T003: MCP客户端模块
 [✅] T004: 对话记忆模块
+[✅] T005: 意图路由Agent
+[✅] T006: 6个专业Agent实现
 [✅] T008: Java Mock服务
 
 ## 失败任务
@@ -21,13 +23,10 @@
 [🚫] 无
 
 ## 待处理任务
-[⏳] T005: 意图路由Agent
-[⏳] T006: 6个专业Agent实现
 [⏳] T007: API Gateway
 [⏳] T009: Gradio Web界面
 [⏳] T010: 集成测试+启动脚本
 
 ## 最近操作
-1. [coder] T002 → done (LLMClient: chat/chat_with_tools/chat_json)
-2. [coder] T003 → done (MCPClient: 8 tools + get_tools_definition)
-3. [coder] T004 → done (ConversationMemory: session管理+上下文)
+1. [coder] T005 → done (RouterAgent: LLM意图分类+confidence过滤)
+2. [coder] T006 → done (7个Agent: BaseAgent+Router+6专业Agent，含工具调用流程)

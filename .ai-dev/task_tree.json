@@ -44,7 +44,7 @@
     "title": "意图路由Agent",
     "description": "创建RouterAgent，通过LLM分类用户意图到6个专业Agent",
     "level": "TASK",
-    "status": "PENDING",
+    "status": "DONE",
     "parent_id": "",
     "dependencies": ["T002"],
     "test_criteria": "输入'我想查订单'路由到order_agent"
@@ -54,7 +54,7 @@
     "title": "6个专业Agent实现",
     "description": "实现售前/产品/订单/优惠券/售后/闲聊6个Agent，每个Agent含system_prompt+工具调用+回复生成",
     "level": "TASK",
-    "status": "PENDING",
+    "status": "DONE",
     "parent_id": "",
     "dependencies": ["T002", "T003", "T004"],
     "test_criteria": "每个Agent能正确调用工具并生成回复"
