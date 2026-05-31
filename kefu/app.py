@@ -24,19 +24,19 @@ def chat(message, history, user_id):
 
 def main():
     init_gateway()
-    with gr.Blocks(title="AI电商客服系统", theme=gr.themes.Soft()) as demo:
+    with gr.Blocks(title="AI电商客服系统") as demo:
         gr.Markdown("# 🤖 AI电商客服系统\n多智能体架构 | 售前咨询 · 产品问答 · 订单查询 · 优惠券 · 售后服务")
 
         with gr.Row():
             user_id_input = gr.Number(value=1, label="用户ID", precision=0)
 
-        chatbot = gr.Chatbot(height=500, type="messages")
+        chatbot = gr.Chatbot(height=500)
         msg_input = gr.Textbox(placeholder="请输入您的问题，例如：我想查订单、有什么优惠、手机推荐...", show_label=False)
 
         def respond(message, chat_history, user_id):
             reply = chat(message, chat_history, user_id)
-            chat_history.append({"role": "user", "content": message})
-            chat_history.append({"role": "assistant", "content": reply})
+            chat_history = chat_history or []
+            chat_history.append((message, reply))
             return "", chat_history
 
         msg_input.submit(respond, [msg_input, chatbot, user_id_input], [msg_input, chatbot])

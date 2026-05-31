@@ -10,7 +10,7 @@ class Config:
     dashscope_api_base: str = "https://dashscope.aliyuncs.com/compatible-mode/v1"
     dashscope_model: str = "qwen-plus"
     mock_api_base: str = "http://localhost:8080"
-    gradio_server_name: str = "0.0.0.0"
+    gradio_server_name: str = "127.0.0.1"
     gradio_server_port: int = 7860
 
     def __post_init__(self):
