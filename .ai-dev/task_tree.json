@@ -14,7 +14,7 @@
     "title": "LLM客户端模块",
     "description": "创建DashScope LLM客户端，支持chat/function_calling/streaming",
     "level": "TASK",
-    "status": "PENDING",
+    "status": "DONE",
     "parent_id": "",
     "dependencies": ["T001"],
     "test_criteria": "LLMClient.chat()返回非空字符串"
@@ -24,7 +24,7 @@
     "title": "MCP客户端模块",
     "description": "创建MCP工具客户端，通过HTTP调用Java Mock服务，支持8个工具函数",
     "level": "TASK",
-    "status": "PENDING",
+    "status": "DONE",
     "parent_id": "",
     "dependencies": ["T001"],
     "test_criteria": "MCPClient.call('search_products', {'query': '手机'})返回JSON"
@@ -34,7 +34,7 @@
     "title": "对话记忆模块",
     "description": "创建ConversationMemory，按session_id管理消息历史和上下文",
     "level": "TASK",
-    "status": "PENDING",
+    "status": "DONE",
     "parent_id": "",
     "dependencies": ["T001"],
     "test_criteria": "Memory添加消息后可按session_id读取"
