@@ -1,0 +1,102 @@
+{
+  "T001": {
+    "id": "T001",
+    "title": "Python项目骨架+依赖配置",
+    "description": "创建kefu Python包结构、pyproject.toml、requirements.txt",
+    "level": "TASK",
+    "status": "PENDING",
+    "parent_id": "",
+    "dependencies": [],
+    "test_criteria": "pip install -e . 成功，import kefu 成功"
+  },
+  "T002": {
+    "id": "T002",
+    "title": "LLM客户端模块",
+    "description": "创建DashScope LLM客户端，支持chat/function_calling/streaming",
+    "level": "TASK",
+    "status": "PENDING",
+    "parent_id": "",
+    "dependencies": ["T001"],
+    "test_criteria": "LLMClient.chat()返回非空字符串"
+  },
+  "T003": {
+    "id": "T003",
+    "title": "MCP客户端模块",
+    "description": "创建MCP工具客户端，通过HTTP调用Java Mock服务，支持8个工具函数",
+    "level": "TASK",
+    "status": "PENDING",
+    "parent_id": "",
+    "dependencies": ["T001"],
+    "test_criteria": "MCPClient.call('search_products', {'query': '手机'})返回JSON"
+  },
+  "T004": {
+    "id": "T004",
+    "title": "对话记忆模块",
+    "description": "创建ConversationMemory，按session_id管理消息历史和上下文",
+    "level": "TASK",
+    "status": "PENDING",
+    "parent_id": "",
+    "dependencies": ["T001"],
+    "test_criteria": "Memory添加消息后可按session_id读取"
+  },
+  "T005": {
+    "id": "T005",
+    "title": "意图路由Agent",
+    "description": "创建RouterAgent，通过LLM分类用户意图到6个专业Agent",
+    "level": "TASK",
+    "status": "PENDING",
+    "parent_id": "",
+    "dependencies": ["T002"],
+    "test_criteria": "输入'我想查订单'路由到order_agent"
+  },
+  "T006": {
+    "id": "T006",
+    "title": "6个专业Agent实现",
+    "description": "实现售前/产品/订单/优惠券/售后/闲聊6个Agent，每个Agent含system_prompt+工具调用+回复生成",
+    "level": "TASK",
+    "status": "PENDING",
+    "parent_id": "",
+    "dependencies": ["T002", "T003", "T004"],
+    "test_criteria": "每个Agent能正确调用工具并生成回复"
+  },
+  "T007": {
+    "id": "T007",
+    "title": "API Gateway",
+    "description": "创建Gateway，整合Router+Agents+Memory，处理用户消息的完整流程",
+    "level": "TASK",
+    "status": "PENDING",
+    "parent_id": "",
+    "dependencies": ["T005", "T006"],
+    "test_criteria": "Gateway.process('我想查订单', user_id=1)返回包含订单信息的回复"
+  },
+  "T008": {
+    "id": "T008",
+    "title": "Java Mock服务",
+    "description": "创建Spring Boot Mock服务，含4个Controller+H2数据库+初始数据",
+    "level": "TASK",
+    "status": "PENDING",
+    "parent_id": "",
+    "dependencies": [],
+    "test_criteria": "mvn spring-boot:run后curl /api/products返回200"
+  },
+  "T009": {
+    "id": "T009",
+    "title": "Gradio Web界面",
+    "description": "创建Gradio Chatbot界面，连接Gateway，支持多轮对话",
+    "level": "TASK",
+    "status": "PENDING",
+    "parent_id": "",
+    "dependencies": ["T007"],
+    "test_criteria": "python main.py启动后浏览器可访问"
+  },
+  "T010": {
+    "id": "T010",
+    "title": "集成测试+启动脚本",
+    "description": "编写集成测试，创建一键启动脚本(start.sh)同时启动Java Mock和Python服务",
+    "level": "TASK",
+    "status": "PENDING",
+    "parent_id": "",
+    "dependencies": ["T008", "T009"],
+    "test_criteria": "start.sh启动后完整流程可走通"
+  }
+}
