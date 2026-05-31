@@ -4,7 +4,7 @@
     "title": "Python项目骨架+依赖配置",
     "description": "创建kefu Python包结构、pyproject.toml、requirements.txt",
     "level": "TASK",
-    "status": "PENDING",
+    "status": "DONE",
     "parent_id": "",
     "dependencies": [],
     "test_criteria": "pip install -e . 成功，import kefu 成功"
@@ -74,7 +74,7 @@
     "title": "Java Mock服务",
     "description": "创建Spring Boot Mock服务，含4个Controller+H2数据库+初始数据",
     "level": "TASK",
-    "status": "PENDING",
+    "status": "DONE",
     "parent_id": "",
     "dependencies": [],
     "test_criteria": "mvn spring-boot:run后curl /api/products返回200"

@@ -1,0 +1,2 @@
+class ChitchatAgent:
+    pass

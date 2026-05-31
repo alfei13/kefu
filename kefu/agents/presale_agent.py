@@ -1,0 +1,2 @@
+class PresaleAgent:
+    pass
